@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "ae338cc3-a873-4ba7-bd49-caf176cc1b09",
+		"name": "Clane Mobile Test Scripts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "News",
+			"item": [
+				{
+					"name": "News",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://5e4bfc87a641ed0014b02740.mockapi.io/api/clane/news?page=1&limit=1",
+							"protocol": "https",
+							"host": [
+								"5e4bfc87a641ed0014b02740",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"api",
+								"clane",
+								"news"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "News Single",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://5e4bfc87a641ed0014b02740.mockapi.io/api/clane/news/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"author\": \"Seun Matt\",\n    \"title\": \"This is a title\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://5e4bfc87a641ed0014b02740.mockapi.io/api/clane/news"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"author\": \"Seun Matt\",\n    \"title\": \"This is a title updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://5e4bfc87a641ed0014b02740.mockapi.io/api/clane/news/51"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://5e4bfc87a641ed0014b02740.mockapi.io/api/clane/news/51"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "News Comments",
+			"item": [
+				{
+					"name": "Comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://5e4bfc87a641ed0014b02740.mockapi.io/api/clane/news/1/comments?page=1&limit=10",
+							"protocol": "https",
+							"host": [
+								"5e4bfc87a641ed0014b02740",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"api",
+								"clane",
+								"news",
+								"1",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comments Single",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://5e4bfc87a641ed0014b02740.mockapi.io/api/clane/news/1/comments/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"newsId\": 1,\n    \"name\": \"Jan Wuckert\",\n    \"avatar\": \"http://lorempixel.com/640/480/fashion\",\n    \"comment\": \"This is me saying you're bluffing!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://5e4bfc87a641ed0014b02740.mockapi.io/api/clane/news/1/comments"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Comment",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Jan Wuckert\",\n    \"avatar\": \"http://lorempixel.com/640/480/fashion\",\n    \"comment\": \"This is me saying you're bluffing! Yet Again??\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://5e4bfc87a641ed0014b02740.mockapi.io/api/clane/news/1/comments/51"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://5e4bfc87a641ed0014b02740.mockapi.io/api/clane/news/1/comments/51"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "News Images",
+			"item": [
+				{
+					"name": "Images",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://5e4bfc87a641ed0014b02740.mockapi.io/api/clane/news/1/images?page=1&limit=10",
+							"protocol": "https",
+							"host": [
+								"5e4bfc87a641ed0014b02740",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"api",
+								"clane",
+								"news",
+								"1",
+								"images"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Images Single",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://5e4bfc87a641ed0014b02740.mockapi.io/api/clane/news/1/images/1"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Images",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"newsId\": 1,\n    \"image\": \"http://lorempixel.com/640/480/fashion\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://5e4bfc87a641ed0014b02740.mockapi.io/api/clane/news/1/images"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Images",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"image\": \"http://lorempixel.com/640/481/fashion\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://5e4bfc87a641ed0014b02740.mockapi.io/api/clane/news/1/images/51"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://5e4bfc87a641ed0014b02740.mockapi.io/api/clane/news/1/images/51"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
